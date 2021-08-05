@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Gowun+Batang&family=Libre+Baskerville:ital@0;1&family=Raleway:wght@100&family=Style+Script&display=swap');
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
-
-@import url('https://fonts.googleapis.com/css2?family=Fenix&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
 
 *{
     margin: 0;
@@ -12,8 +9,8 @@
 
 :root{
     --font-primary: "Fenix", serif;
-    --font-secundary: "Open Sans", serif;
-    --font-action: "Open Sans", serif;
+    --font-secundary: "Baloo Da 2", serif;
+    --font-action: "Mulish", serif;
 }
 
 header{
@@ -228,8 +225,8 @@ header{
 .conhecimentos{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(6, 6rem);
-    row-gap: .5rem;
+    grid-template-rows: repeat(6, 8rem);
+    row-gap: .2rem;
 }
 
 .conhecimento:nth-child(1){
@@ -263,7 +260,7 @@ header{
 }
 
 .sessao-conhecimentos{
-    background-color: rgb(248, 213, 234);
+    background-color: rgb(250, 245, 248);
 }
 
 .sessao-header{
@@ -274,8 +271,123 @@ header{
 
 .sessao-header h1{
     font-family: var(--font-primary);
-    font-size: 3rem;
+    font-size: 2rem;
     color: gray;
     border-bottom: solid 3px #870000;
     margin-bottom: 1.5rem;
+}
+
+.conhecimento-header{
+    display: flex;
+    align-items: center;
+    color: #4b4b4b;
+}
+
+.conhecimento-header i{
+    font-size: 2.5rem;
+}
+
+.conhecimento-header h3{
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.conhecimento-text{
+    font-family: var(--font-secundary);
+    margin-top: 1rem;
+}
+
+.conhecimentos-img-wrapper{
+    grid-column: 7 / 11;
+    grid-row: 2 / 6;
+    width: 100%;
+}
+
+.conhecimentos-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%; 
+    border-radius: .5rem;
+    opacity: .8;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: .5rem;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .4);
+    transition: all .3s;
+}
+
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.card-info h3{
+    font-family:var(--font-action);
+    font-weight: bolder;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-family: var(--font-action);
+    color: #eee;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background: #870000;  
+    background: -webkit-linear-gradient(to right, #190A05, #870000); 
+    background: linear-gradient(to right, #190A05, #870000); 
+    font-family: var(--font-action);
+    font-size: .9rem;
+    color: #eee;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
 }
